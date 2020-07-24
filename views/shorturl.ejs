@@ -1,0 +1,29 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Short urls</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+    <link href="/public/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div>
+        <form action="/api/shorturl/new" method="POST">
+            <label for="url_input">URL to be shortened</label>
+            <input id="url_input" type="text" name="url_input" value="https://www.freecodecamp.org">
+            <input type="submit" value="POST URL">
+        </form>
+
+        <% if (!typeof(url) == 'undefined') {%>
+        <%= url %>
+        <% } %>
+
+
+
+    </div>
+
+</body>
+
+</html>
